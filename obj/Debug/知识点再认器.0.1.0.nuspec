@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>知识点再认器</id>
+    <version>0.1.0</version>
+    <authors>知识点再认器</authors>
+    <owners>知识点再认器</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <icon>favicon.ico</icon>
+    <description>暂且只实现了逐个随机的功能</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\文件\programming\c#\知识点再认器\知识点再认器\bin\Debug\netcoreapp3.1\知识点再认器.runtimeconfig.json" target="lib\netcoreapp3.1\知识点再认器.runtimeconfig.json" />
+    <file src="D:\文件\programming\c#\知识点再认器\知识点再认器\bin\Debug\netcoreapp3.1\知识点再认器.dll" target="lib\netcoreapp3.1\知识点再认器.dll" />
+    <file src="D:\文件\programming\c#\知识点再认器\favicon.ico" target="favicon.ico" />
+  </files>
+</package>

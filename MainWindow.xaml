@@ -1,0 +1,49 @@
+﻿<Window x:Class="知识点再认器.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:知识点再认器"
+        mc:Ignorable="d"
+        Title="知识再认" Height="400" Width="600"
+        KeyDown="MainWindows_Keydown">
+    <Border Padding="10">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" >
+                    <TextBlock x:Name="model" Margin="10" Text="" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    <TextBlock Visibility="Hidden" x:Name="progress" Margin="0 0 0 10" Text="0/0" FontSize="14" HorizontalAlignment="Center"/>
+                    <TextBlock Margin="50 50 50 0" TextWrapping="Wrap" x:Name="Card"  Text="none" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <ComboBox x:Name="Models" Margin="0 10 0 30" SelectedIndex="1">
+                        <ComboBoxItem Content="逐个顺序"/>
+                        <ComboBoxItem Content="逐个随机"/>
+                        <ComboBoxItem Content="多个随机"/>
+                    </ComboBox>
+                    <TextBlock Margin="0 0 0 10" Text="单次随机数量"/>
+                    <TextBox x:Name="randNumber" Padding="3" />
+                    <Button Margin="30 20 30 0"  Padding="3" x:Name="btn_LoadFile" Content="载入文件" Click="loadfile"/>
+                    <Button Margin="30 20 30 0"  Padding="3"  Content="再来一次" Click="SameAgain"/>
+                
+                    <Button Margin="30 20 30 0" Padding="3" Content="生词再认" Click="NewLinesAgain" />
+                    <Button Margin="30 20 30 0" Padding="3" Content="生词保存"  />
+                </StackPanel>
+            </Grid>
+            <Grid Margin="100 20 100 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Margin="20 0 20 0" Grid.Column="0" x:Name="btn_left" FontSize="20" Content="&lt;-" Click="GetPreviousOne"/>
+                <Button Margin="20 0 20 0" Grid.Column="2" x:Name="btn_right" FontSize="20" Content="-&gt;" Click="GetNextOne"/>
+                <Button Margin="20 0 20 0" Grid.Column="1" x:Name="btn_save" FontSize="20" Content="save" Click="Save"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
