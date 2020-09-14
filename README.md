@@ -2,4 +2,4 @@
 
 贴两张图片（）
 
-![running](README/running.png)![demo](README/demo-1600073234820.png)
+![running](imgs/running.png)![demo](imgs/demo.png)
